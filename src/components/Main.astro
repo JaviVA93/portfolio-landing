@@ -1,0 +1,105 @@
+<div id="container">
+    <div class="hi">
+        <h1>Hola</h1>
+        <div class="hand">✋</div>
+    </div>
+    <h2>
+        Mi nombre es Javi, y soy desarrollador frond-end ubicado en Mallorca 🏝️
+    </h2>
+    <div class="links">
+        <span>Si quieres saber mas sobre mi:</span>
+        <a
+            href="https://www.linkedin.com/in/javier-villar-almiron/"
+            target="_blank"
+        >
+            <img src="/linkedin.svg" />
+            <span>Linkedin</span>
+        </a>
+        <a href="https://github.com/JaviVA93" target="_blank">
+            <img src="/github.svg" />
+            <span>Github</span>
+        </a>
+    </div>
+</div>
+
+<style>
+    #container {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 24px;
+        background-color: rgb(210, 247, 244);
+        max-width: 700px;
+        height: fit-content;
+        border-radius: 8px;
+        box-shadow: 0px 0px 8px 0px;
+    }
+
+    .hi {
+        display: flex;
+        align-items: flex-end;
+
+        h1 {
+            height: 32px;
+        }
+    }
+
+    .hand {
+        font-size: 40px;
+        display: inline-block;
+        transform-origin: 50% 80%;
+        animation: salute 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    h1,
+    h2,
+    span,
+    a {
+        color: rgb(3, 63, 57);
+        margin: 0;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        a {
+            all: unset;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: 8px;
+            transition: margin 0.5s ease;
+            width: fit-content;
+
+            img {
+                width: 24px;
+            }
+        }
+
+        a:hover {
+            margin-left: 16px;
+        }
+    }
+
+    @keyframes salute {
+        0%,
+        45%,
+        100% {
+            transform: rotate(0deg); /* Neutral position */
+        }
+        15%,
+        30% {
+            transform: rotate(-35deg); /* Hand moves up & rotates */
+        }
+        22% {
+            transform: rotate(-20deg); /* Hand moves up & rotates */
+        }
+    }
+</style>
