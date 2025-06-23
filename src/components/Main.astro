@@ -3,9 +3,14 @@
         <h1>Hola</h1>
         <div class="hand">✋</div>
     </div>
-    <h2>
-        Mi nombre es Javi, y soy desarrollador frond-end ubicado en Mallorca 🏝️
-    </h2>
+    <div>
+        <h2>
+            Mi nombre es Javi,
+        </h2>
+        <h2>
+            desarrollador frond-end ubicado en Mallorca 🏝️
+        </h2>
+    </div>
     <div class="links">
         <span>Si quieres saber mas sobre mi:</span>
         <a
@@ -23,6 +28,12 @@
 </div>
 
 <style>
+    @media (max-width: 900px) {
+        #container {
+            width: 80%;
+        }
+    }
+
     #container {
         position: absolute;
         top: 20%;
@@ -30,7 +41,7 @@
         transform: translateX(-50%);
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 16px;
         padding: 24px;
         background-color: rgb(210, 247, 244);
         max-width: 700px;
@@ -77,6 +88,11 @@
             margin-left: 8px;
             transition: margin 0.5s ease;
             width: fit-content;
+
+            background-color: rgb(179, 245, 238);
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid rgb(27, 80, 75);
 
             img {
                 width: 24px;
