@@ -1,4 +1,4 @@
-<div id="container">
+<div id="main-container">
     <div class="hi">
         <h1>Hola</h1>
         <div class="hand">✋</div>
@@ -29,12 +29,12 @@
 
 <style>
     @media (max-width: 900px) {
-        #container {
-            width: 80%;
+        #main-container {
+            
         }
     }
 
-    #container {
+    #main-container {
         position: absolute;
         top: 20%;
         left: 50%;
@@ -44,6 +44,7 @@
         gap: 16px;
         padding: 24px;
         background-color: rgb(210, 247, 244);
+        width: 75%;
         max-width: 700px;
         height: fit-content;
         border-radius: 8px;
@@ -108,7 +109,7 @@
         0%,
         45%,
         100% {
-            transform: rotate(0deg); /* Neutral position */
+            transform: rotate(-15deg); /* Neutral position */
         }
         15%,
         30% {
