@@ -1,5 +1,14 @@
+---
+import { languageList } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
+
+const currentLang = Astro.currentLocale || 'es';
+
+const translatedLabels = useTranslations(currentLang as keyof typeof languageList)
+---
+
 <div id="footer">
-    <span>Gracias por visitar ❤️</span>
+    <span>{translatedLabels('footer-text')}</span>
 </div>
 
 <style>

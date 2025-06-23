@@ -1,18 +1,27 @@
+---
+import { languageList } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
+
+const currentLang = Astro.currentLocale || 'es';
+
+const translatedLabels = useTranslations(currentLang as keyof typeof languageList)
+---
+
 <div id="main-container">
     <div class="hi">
-        <h1>Hola</h1>
+        <h1>{translatedLabels('main-title')}</h1>
         <div class="hand">✋</div>
     </div>
     <div>
         <h2>
-            Mi nombre es Javi,
+            {translatedLabels('main-subtitle-1')}
         </h2>
         <h2>
-            desarrollador frond-end ubicado en Mallorca 🏝️
+            {translatedLabels('main-subtitle-2')}
         </h2>
     </div>
     <div class="links">
-        <span>Si quieres saber mas sobre mi:</span>
+        <span>{translatedLabels('main-more-about-me')}</span>
         <a
             href="https://www.linkedin.com/in/javier-villar-almiron/"
             target="_blank"

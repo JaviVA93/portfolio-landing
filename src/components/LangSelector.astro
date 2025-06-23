@@ -1,0 +1,35 @@
+---
+import { languageList, defaultLang } from "../i18n/ui";
+
+const currentLang = Astro.currentLocale || 'es';
+---
+
+<div class="lang-selector">
+    {
+        Object.entries(languageList).map(([key, label]: [string, string]) => {
+            const isCurrent = key === currentLang;
+            const isDefaultLang = key === defaultLang;
+            return <a href={`/${isDefaultLang ? "" : key}`} class={isCurrent ? "bold": ""}>{label}</a>;
+        })
+    }
+</div>
+
+<style>
+    .lang-selector {
+        position: fixed;
+        top: 4px;
+        right: 4px;
+        display: flex;
+        gap: 4px;
+
+        a {
+            text-decoration: none;
+            color: rgb(3, 63, 57);
+            font-size: 16px;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+    }
+</style>
